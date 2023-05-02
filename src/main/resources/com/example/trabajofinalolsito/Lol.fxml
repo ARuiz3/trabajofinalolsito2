@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabajofinalolsito.LolController">
+   <children>
+      <TableView fx:id="tabla" layoutX="37.0" layoutY="49.0" prefHeight="302.0" prefWidth="526.0">
+        <columns>
+          <TableColumn fx:id="nombre" prefWidth="68.0" text="nombre" />
+          <TableColumn fx:id="dificultad" prefWidth="82.0" text="dificultad" />
+            <TableColumn fx:id="rol" prefWidth="75.0" text="rol" />
+            <TableColumn fx:id="posicion" prefWidth="69.0" text="posicion" />
+            <TableColumn fx:id="region" prefWidth="125.0" text="region" />
+            <TableColumn fx:id="esencia" prefWidth="64.0" text="esencia" />
+            <TableColumn fx:id="rp" prefWidth="42.0" text="rp" />
+        </columns>
+      </TableView>
+      <Label layoutX="173.0" layoutY="14.0" text="League of Legends Personajes">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

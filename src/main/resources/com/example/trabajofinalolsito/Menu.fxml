@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane prefHeight="339.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabajofinalolsito.MenuController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="309.0" layoutX="297.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@MV5BODhkN2U1YzYtODQzZC00MTc5LTlmMmYtYjQ2ZGU2ZmM4YzJkXkEyXkFqcGdeQXVyMTE0MTc4MjU2._V1_FMjpg_UX1000_.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="400.0" fitWidth="310.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@87a1ef48e43b8cf114017e3ad51b801951b20fcf.jpg" />
+         </image></ImageView>
+      <Button fx:id="lol" layoutX="50.0" layoutY="297.0" mnemonicParsing="false" opacity="0.27" prefHeight="82.0" prefWidth="189.0" style="-fx-border-color: #000000; -fx-border-width: 5;" textOverrun="WORD_ELLIPSIS">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color opacity="0.09956710040569305" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
+      <Separator layoutX="297.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="0.0" />
+      <Button fx:id="valo" layoutX="310.0" layoutY="317.0" mnemonicParsing="false" opacity="0.22" prefHeight="49.0" prefWidth="269.0" style="-fx-border-color: #000000; -fx-border-width: 5;" />
+   </children>
+</AnchorPane>

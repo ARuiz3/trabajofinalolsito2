@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?javafx.scene.control.EmailField?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabajofinalolsito.RegistroController">
+   <children>
+      <ImageView fitHeight="302.0" fitWidth="658.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@registro.png" />
+         </image></ImageView>
+      <Label layoutX="219.0" layoutY="6.0" text="Registro">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="242.0" layoutY="41.0" text="nombre" />
+      <TextField fx:id="nombre" layoutX="189.0" layoutY="58.0" />
+      <Label layoutX="246.0" layoutY="91.0" text="correo" />
+      <TextField fx:id="correo" layoutX="189.0" layoutY="108.0"/>
+      <Label layoutX="221.0" layoutY="143.0" text="fecha nacimiento" />
+      <DatePicker fx:id="fecha" layoutX="189.0" layoutY="160.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="234.0" layoutY="197.0" text="contraseña" />
+      <PasswordField fx:id="contrasenaRegistro" layoutX="189.0" layoutY="214.0" />
+      <Button layoutX="233.0" layoutY="251.0" mnemonicParsing="false" text="Aceptar" />
+   </children>
+</AnchorPane>
