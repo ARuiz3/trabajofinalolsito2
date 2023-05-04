@@ -1,8 +1,7 @@
 package com.example.trabajofinalolsito;
 import java.sql.*;
 public class BBDD {
-    final private String USER = "root";
-    final private String CONTRA = "TheRAnto44";
+
     protected String nombre;
     protected String dificultad;
     protected String rol;
@@ -78,21 +77,23 @@ public class BBDD {
     }
 
 
-    public void crearTablas(){
+    public static void crearTablas(){
+        final  String USER = "root";
+        final  String CONTRA = "TheRAnto44";
         Connection con = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/lolsito", USER, CONTRA);
             Statement smt = con.createStatement();
             //creacion de la tabla de personajes
-            smt.executeUpdate("CREATE TABLE precio(id_precio INT auto_increment primary key not null, esencia INT not null, rp INT not null);");
-            smt.executeUpdate("CREATE TABLE plol(id_plol INT auto_increment primary key not null, nombre varchar(20) not null, dificultad varchar(20) not null, rol varchar(50) not null, posicion varchar(50) not null,region varchar(20) not null, id_precio INT, foreign key (id_precio) references precio(id_precio));");
-            smt.executeUpdate("CREATE TABLE pvalorant(id_pvalorant INT auto_increment primary key not null, nombre varchar(20) not null, clase varchar(20) not null, nacionalidad varchar(20) not null );");
-            smt.executeUpdate("CREATE TABLE usuario(id_usuario INT auto_increment primary key not null, nombre varchar(50) not null, correo varchar(40),fecha_nacimiento date not null, contraseña varchar(20) not null);");
-            smt.executeUpdate("CREATE TABLE avalorant(id_avalorant INT auto_increment primary key not null, nombre varchar(20) not null, tipo varchar(20) not null, precio int not null);");
-            smt.executeUpdate("CREATE TABLE tusuariopvalorant(id_tusuariopvalorant INT auto_increment primary key not null, id_pvalorant INT , id_usuario INt , foreign key (id_pvalorant) references pvalorant(id_pvalorant), foreign key (id_usuario) references usuario(id_usuario));");
-            smt.executeUpdate("CREATE TABLE tusuarioavalorant(id_tusuarioavalorant INT auto_increment primary key not null, id_avalorant INT , id_usuario INT , foreign key (id_avalorant) references avalorant(id_avalorant), foreign key (id_usuario) references usuario(id_usuario));");
-            smt.executeUpdate("CREATE TABLE tusuarioplol(id_tusuarioplol INT auto_increment primary key not null, id_plol INT , id_usuario INt , foreign key (id_plol) references plol(id_plol), foreign key (id_usuario) references usuario(id_usuario));");
+            smt.executeUpdate("CREATE TABLE IF NOT EXISTS precio(id_precio INT auto_increment primary key not null, esencia INT not null, rp INT not null);");
+            smt.executeUpdate("CREATE TABLE IF NOT EXISTS plol(id_plol INT auto_increment primary key not null, nombre varchar(20) not null, dificultad varchar(20) not null, rol varchar(50) not null, posicion varchar(50) not null,region varchar(20) not null, id_precio INT, foreign key (id_precio) references precio(id_precio));");
+            smt.executeUpdate("CREATE TABLE IF NOT EXISTS pvalorant(id_pvalorant INT auto_increment primary key not null, nombre varchar(20) not null, clase varchar(20) not null, nacionalidad varchar(20) not null );");
+            smt.executeUpdate("CREATE TABLE IF NOT EXISTS usuario(id_usuario INT auto_increment primary key not null, nombre varchar(50) not null, correo varchar(40),fecha_nacimiento date not null, contraseña varchar(20) not null);");
+            smt.executeUpdate("CREATE TABLE IF NOT EXISTS avalorant(id_avalorant INT auto_increment primary key not null, nombre varchar(20) not null, tipo varchar(20) not null, precio int not null);");
+            smt.executeUpdate("CREATE TABLE IF NOT EXISTS tusuariopvalorant(id_tusuariopvalorant INT auto_increment primary key not null, id_pvalorant INT , id_usuario INt , foreign key (id_pvalorant) references pvalorant(id_pvalorant), foreign key (id_usuario) references usuario(id_usuario));");
+            smt.executeUpdate("CREATE TABLE IF NOT EXISTS tusuarioavalorant(id_tusuarioavalorant INT auto_increment primary key not null, id_avalorant INT , id_usuario INT , foreign key (id_avalorant) references avalorant(id_avalorant), foreign key (id_usuario) references usuario(id_usuario));");
+            smt.executeUpdate("CREATE TABLE IF NOT EXISTS tusuarioplol(id_tusuarioplol INT auto_increment primary key not null, id_plol INT , id_usuario INt , foreign key (id_plol) references plol(id_plol), foreign key (id_usuario) references usuario(id_usuario));");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } catch (ClassNotFoundException e) {
