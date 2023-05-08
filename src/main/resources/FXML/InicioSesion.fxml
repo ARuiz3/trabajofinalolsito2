@@ -5,16 +5,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="300.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabajofinalolsito.InicioSesionController">
+<AnchorPane prefHeight="300.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.InicioSesionController">
     <children>
       <ImageView fx:id="fondo1" fitHeight="338.0" fitWidth="592.0" layoutX="-24.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@riot-games-promises-to-pay-staff-who-leave-amid-new-company_hbes.png" />
          </image>
       </ImageView>
-        <Button id="login" layoutX="228.0" layoutY="195.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" text="Iniciar Sesion" />
-        <TextField id="user" layoutX="215.0" layoutY="84.0" />
-        <TextField id="contra" layoutX="215.0" layoutY="150.0" />
+        <Button onAction="#iniciarSesion" fx:id="login" layoutX="228.0" layoutY="195.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" text="Iniciar Sesion" />
+        <TextField fx:id="user" layoutX="215.0" layoutY="84.0" />
+        <PasswordField fx:id="contra" layoutX="215.0" layoutY="150.0" />
         <Label layoutX="217.0" layoutY="-3.0" text="Inicio de sesión" textFill="WHITE">
             <font>
                 <Font size="24.0" />
@@ -32,7 +32,7 @@
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Button layoutX="449.0" layoutY="281.0" mnemonicParsing="false" style="-fx-background-color: #0F7ABD;" text="Crear Cuenta" textFill="WHITE">
+      <Button fx:id="crearCuenta" layoutX="449.0" layoutY="281.0" mnemonicParsing="false" style="-fx-background-color: #0F7ABD;" text="Crear Cuenta" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ValorantController">
+  <tabs>
+    <Tab text="Personajes">
+      <content>
+        <AnchorPane id="Personajes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="Tablapv" layoutX="50.0" layoutY="36.0" prefHeight="300.0" prefWidth="500.0">
+                    <columns>
+                      <TableColumn fx:id="Nombrepv" prefWidth="175.0" text="Nombre" />
+                        <TableColumn fx:id="Clasepv" prefWidth="175.0" text="Clase" />
+                        <TableColumn fx:id="Nacionalidadpv" prefWidth="175.0" text="Nacionalidad" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Armas">
+      <content>
+        <AnchorPane id="Armas" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="Tablaav" layoutX="50.0" layoutY="36.0" prefHeight="300.0" prefWidth="500.0">
+                    <columns>
+                      <TableColumn fx:id="Nombreav" prefWidth="175.0" text="Nombre" />
+                      <TableColumn fx:id="Tipoav" prefWidth="175.0" text="Tipo" />
+                        <TableColumn fx:id="Precioav" prefWidth="175.0" text="Precio" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

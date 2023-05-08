@@ -1,4 +1,4 @@
-package com.example.trabajofinalolsito;
+package Controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

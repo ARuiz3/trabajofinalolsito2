@@ -4,6 +4,6 @@ module com.example.trabajofinalolsito {
     requires java.sql;
 
 
-    opens com.example.trabajofinalolsito to javafx.fxml;
-    exports com.example.trabajofinalolsito;
+    opens Controllers to javafx.fxml;
+    exports Controllers;
 }
